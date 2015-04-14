@@ -35,3 +35,46 @@ var search = function(name) {
         }
     }   
 }
+
+
+// Rectangle Object and methods
+function Rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+  this.calcArea = function() {
+      return this.height * this.width;
+  };
+  // put our perimeter function here!
+  this.calcPerimeter = function() {
+    return (this.height * 2) + (this.width * 2)
+  };
+}
+
+var rex = new Rectangle(7,3);
+var area = rex.calcArea();
+var perimeter = rex.calcPerimeter();
+
+
+
+
+// Arrays of objects and accessing property values
+
+// person constructor
+var Person = function(name,age) {
+this.name = name;
+this.age = age;
+};
+
+// array of people
+var family = new Array();
+
+// set array elements
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+family[3] = new Person("timmy", 6);
+
+// loop through the array to access names
+for (i = 0; i < family.length; i++) {
+    console.log(family[i].name);    
+}
